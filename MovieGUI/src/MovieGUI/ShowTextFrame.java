@@ -2,6 +2,7 @@ package MovieGUI;
 
 
 import javax.swing.*;
+
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.text.BadLocationException;
@@ -41,7 +42,8 @@ public class ShowTextFrame extends JFrame {
 
 	
 
-	public static void main(String[] args) throws IOException{
+	public ShowTextFrame() {
+	//public static void main(String[] args) throws IOException{
 		
 		
 		JTextField tf = new JTextField(18); ;//创建文本框
@@ -102,7 +104,7 @@ public class ShowTextFrame extends JFrame {
 		f.setSize(1000, 1000);			//窗口大小
 		//f.pack();
 		f.setLocationRelativeTo(null);	//窗口居中
-		f.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		//f.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		
 		try {
@@ -141,7 +143,7 @@ public class ShowTextFrame extends JFrame {
 				
 				f1.setSize(700, 800);
 				f1.setLocationRelativeTo(null);	//窗口居中
-				f1.setDefaultCloseOperation(EXIT_ON_CLOSE);
+				//f1.setDefaultCloseOperation(EXIT_ON_CLOSE);
 				
 				JTextArea ta1  = new JTextArea(50,60);
 				
@@ -188,11 +190,15 @@ public class ShowTextFrame extends JFrame {
 		
 		
 		
-			
+		if(LandingMyActionListener.land==true)	{
 			bt3.addActionListener(new ActionListener() {
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					
+					
+					
+					
 					String filename = "D:\\douban\\pinglun.txt";
 			
 					try {
@@ -227,8 +233,9 @@ public class ShowTextFrame extends JFrame {
 				}		
 			});
 			
-				
-				
+		}	
+			
+		if(LandingMyActionListener.land==true) {
 			bt2.addActionListener(new ActionListener() {
 				
 				@Override
@@ -256,7 +263,7 @@ public class ShowTextFrame extends JFrame {
 				
 			});
 				
-			
+		}
 			
 			ta.addMouseListener(new MouseListener() {
 				
@@ -315,10 +322,19 @@ public class ShowTextFrame extends JFrame {
 			
 		
 				f.setVisible(true);
+				
 	}
-	
+/**	
+	public static void main(String[] args) {
+		new ShowTextFrame();
+	}
+	**/
 }
+
+
+
+	
+//}
 		
 
-	
-
+		

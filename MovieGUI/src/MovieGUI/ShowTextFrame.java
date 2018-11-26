@@ -46,15 +46,15 @@ public class ShowTextFrame extends JFrame {
 	//public static void main(String[] args) throws IOException{
 		
 		
-		JTextField tf = new JTextField(18); ;//´´½¨ÎÄ±¾¿ò
+		JTextField tf = new JTextField(18); ;//åˆ›å»ºæ–‡æœ¬æ¡†
 	
-		JButton bt = new JButton("ËÑË÷");	//´´½¨ËÑË÷°´Å¥
+		JButton bt = new JButton("æœç´¢");	//åˆ›å»ºæœç´¢æŒ‰é’®
 		
-		JTextArea ta  = new JTextArea(50,60);	//´´½¨ÎÄ±¾ÓòÏÔÊ¾ÎÄ±¾ĞÅÏ¢
+		JTextArea ta  = new JTextArea(50,60);	//åˆ›å»ºæ–‡æœ¬åŸŸæ˜¾ç¤ºæ–‡æœ¬ä¿¡æ¯
 		
-		JButton bt2 = new JButton("²é¿´ÆÀÂÛ");
+		JButton bt2 = new JButton("æŸ¥çœ‹è¯„è®º");
 		
-		JButton bt3 = new JButton("Ìí¼ÓÆÀÂÛ");
+		JButton bt3 = new JButton("æ·»åŠ è¯„è®º");
 		
 		JTextField tf2 = new JTextField(10);
 		
@@ -65,9 +65,9 @@ public class ShowTextFrame extends JFrame {
 		JLabel jl = new JLabel();
 		JPanel jp3 = new JPanel();
 		
-		JScrollPane sp2 = new JScrollPane(ta2);	//ÎÄ±¾ÓòÌí¼Óµ½¹ö¶¯Ãæ°å
-		sp2.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS); 	//´¹Ö±¹ö¶¯Ìõ×ÜÊÇÏÔÊ¾
-		sp2.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS); //Ë®Æ½¹ö¶¯Ìõ×ÜÊÇÏÔÊ¾
+		JScrollPane sp2 = new JScrollPane(ta2);	//æ–‡æœ¬åŸŸæ·»åŠ åˆ°æ»šåŠ¨é¢æ¿
+		sp2.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS); 	//å‚ç›´æ»šåŠ¨æ¡æ€»æ˜¯æ˜¾ç¤º
+		sp2.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS); //æ°´å¹³æ»šåŠ¨æ¡æ€»æ˜¯æ˜¾ç¤º
 		
 		
 		JFrame f = new JFrame();
@@ -94,16 +94,16 @@ public class ShowTextFrame extends JFrame {
 
 		
 		
-		JScrollPane sp = new JScrollPane(ta);	//ÎÄ±¾ÓòÌí¼Óµ½¹ö¶¯Ãæ°å
-		sp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS); 	//´¹Ö±¹ö¶¯Ìõ×ÜÊÇÏÔÊ¾
-		sp.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS); //Ë®Æ½¹ö¶¯Ìõ×ÜÊÇÏÔÊ¾
+		JScrollPane sp = new JScrollPane(ta);	//æ–‡æœ¬åŸŸæ·»åŠ åˆ°æ»šåŠ¨é¢æ¿
+		sp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS); 	//å‚ç›´æ»šåŠ¨æ¡æ€»æ˜¯æ˜¾ç¤º
+		sp.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS); //æ°´å¹³æ»šåŠ¨æ¡æ€»æ˜¯æ˜¾ç¤º
 		jp2.add(sp);
 		
 		
-		f.setTitle("¶¹°êµçÓ°TOP250");	//´°¿Ú±êÌâ
-		f.setSize(1000, 1000);			//´°¿Ú´óĞ¡
+		f.setTitle("è±†ç“£ç”µå½±TOP250");	//çª—å£æ ‡é¢˜
+		f.setSize(1000, 1000);			//çª—å£å¤§å°
 		//f.pack();
-		f.setLocationRelativeTo(null);	//´°¿Ú¾ÓÖĞ
+		f.setLocationRelativeTo(null);	//çª—å£å±…ä¸­
 		//f.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		
@@ -113,7 +113,7 @@ public class ShowTextFrame extends JFrame {
 			String line;
 			
 		while ((line = reader.readLine()) != null)
-			//°´ĞĞ¶ÁÈ¡ÎÄ±¾£¬ÏÔÊ¾ÔÚTEXTAREAÖĞ
+			//æŒ‰è¡Œè¯»å–æ–‡æœ¬ï¼Œæ˜¾ç¤ºåœ¨TEXTAREAä¸­
 			
 			ta.append(line + "\r\n");
 			reader.close();
@@ -123,7 +123,7 @@ public class ShowTextFrame extends JFrame {
 	}
 
 
-		//ÉèÖÃ´°Ìå¹Ø±Õ
+		//è®¾ç½®çª—ä½“å…³é—­
 		f.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
@@ -135,14 +135,14 @@ public class ShowTextFrame extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				//»ñÈ¡ÎÄ±¾¿òµÄÖµ
+				//è·å–æ–‡æœ¬æ¡†çš„å€¼
 				String tf_str = tf.getText().trim();
 				
 				
-				JFrame f1 = new JFrame("ËÑË÷½á¹ûÈçÏÂ");
+				JFrame f1 = new JFrame("æœç´¢ç»“æœå¦‚ä¸‹");
 				
 				f1.setSize(700, 800);
-				f1.setLocationRelativeTo(null);	//´°¿Ú¾ÓÖĞ
+				f1.setLocationRelativeTo(null);	//çª—å£å±…ä¸­
 				//f1.setDefaultCloseOperation(EXIT_ON_CLOSE);
 				
 				JTextArea ta1  = new JTextArea(50,60);
@@ -150,9 +150,9 @@ public class ShowTextFrame extends JFrame {
 				JPanel jp1 = new JPanel();
 				
 				
-				JScrollPane sp1 = new JScrollPane(ta1);	//ÎÄ±¾ÓòÌí¼Óµ½¹ö¶¯Ãæ°å
-				sp1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS); 	//´¹Ö±¹ö¶¯Ìõ×ÜÊÇÏÔÊ¾
-				sp1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS); //Ë®Æ½¹ö¶¯Ìõ×ÜÊÇÏÔÊ¾
+				JScrollPane sp1 = new JScrollPane(ta1);	//æ–‡æœ¬åŸŸæ·»åŠ åˆ°æ»šåŠ¨é¢æ¿
+				sp1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS); 	//å‚ç›´æ»šåŠ¨æ¡æ€»æ˜¯æ˜¾ç¤º
+				sp1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS); //æ°´å¹³æ»šåŠ¨æ¡æ€»æ˜¯æ˜¾ç¤º
 				f1.add(sp1);
 				
 				
@@ -175,10 +175,10 @@ public class ShowTextFrame extends JFrame {
 					e.printStackTrace();
 				}
 				
-				//»ñÈ¡¹â±ê
+				//è·å–å…‰æ ‡
 				tf.requestFocus();
 				
-				//ÉèÖÃ´°Ìå¿É¼û
+				//è®¾ç½®çª—ä½“å¯è§
 				f1.setVisible(true);
 				
 			}
@@ -205,20 +205,20 @@ public class ShowTextFrame extends JFrame {
 					File file = new File(filename);
 					FileOutputStream fos = null;
 					if(!file.exists()) {
-						file.createNewFile();//Èç¹ûÎÄ¼ş²»´æÔÚ£¬¾Í´´½¨¸ÃÎÄ¼ş
-						fos = new FileOutputStream(file);//Ê×´ÎĞ´Èë»ñÈ¡
+						file.createNewFile();//å¦‚æœæ–‡ä»¶ä¸å­˜åœ¨ï¼Œå°±åˆ›å»ºè¯¥æ–‡ä»¶
+						fos = new FileOutputStream(file);//é¦–æ¬¡å†™å…¥è·å–
 					}else {
-						//Èç¹ûÎÄ¼şÒÑ´æÔÚ£¬¾ÍÔÚÎÄ¼şÄ©Î²×·¼ÓĞ´Èë
+						//å¦‚æœæ–‡ä»¶å·²å­˜åœ¨ï¼Œå°±åœ¨æ–‡ä»¶æœ«å°¾è¿½åŠ å†™å…¥
 						fos = new FileOutputStream(file,true);
 						OutputStreamWriter os = new OutputStreamWriter(fos);
-						//»ñÈ¡ÎÄ±¾¿òµÄÖµ
+						//è·å–æ–‡æœ¬æ¡†çš„å€¼
 						String tf2_str = tf2.getText().trim();				
-						//Çå¿ÕÊı¾İ
+						//æ¸…ç©ºæ•°æ®
 						tf2.setText("");
-						//ÎÄ±¾¿òÄÚÈİ×·¼Ó
-						ta2.append(tf2_str+"\r\n");
+						//æ–‡æœ¬æ¡†å†…å®¹è¿½åŠ 
+						ta2.append("@"+LandingMyActionListener.userName+":"+tf2_str+"\r\n");
 						
-						os.write(tf2_str+"\r\n");		
+						os.write("@"+LandingMyActionListener.userName+":"+tf2_str+"\r\n");		
 						os.close();
 						
 						
@@ -241,7 +241,7 @@ public class ShowTextFrame extends JFrame {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					String filename = "D:\\douban\\pinglun.txt";
-					//¶ÁÈ¡ÎÄ¼ş
+					//è¯»å–æ–‡ä»¶
 					try {
 						InputStream is = new FileInputStream(filename);
 						BufferedReader br = new BufferedReader(new InputStreamReader(is));
@@ -295,9 +295,9 @@ public class ShowTextFrame extends JFrame {
 				public void mouseClicked(MouseEvent e) {
 					
 					try {
-						//»ñÈ¡Á´½ÓĞÅÏ¢
+						//è·å–é“¾æ¥ä¿¡æ¯
 						URL url = new URL(ta.getText().split("\n").toString().substring(0, 42));
-						//ÔÚÏµÍ³Ä¬ÈÏä¯ÀÀÆ÷ÖĞ´ò¿ªÁ´½Ó
+						//åœ¨ç³»ç»Ÿé»˜è®¤æµè§ˆå™¨ä¸­æ‰“å¼€é“¾æ¥
 						Desktop.getDesktop().browse(url.toURI());
 					}catch(Exception ex) {
 						ex.printStackTrace();
